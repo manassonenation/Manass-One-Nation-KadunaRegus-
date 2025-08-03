@@ -1,0 +1,2286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manass One Nation Kaduna Regus</title>
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+	<style>
+ :root {
+            --primary: #1a5c9e;
+            --secondary: #f39c12;
+            --accent: #27ae60;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --darker: #1a2a3b;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            --transition: all 0.3s ease;
+            --gradient: linear-gradient(135deg, #1a5c9e, #27ae60);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0d3a6d, #1a5c9e);
+            color: var(--light);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-attachment: fixed;
+            min-height: 100vh;
+            position: relative;
+           
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+ overflow: hidden;
+        }
+        
+        header {
+            background: rgba(26, 92, 158, 0.95);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 0.5rem 0;
+            background: rgba(26, 92, 158, 0.98);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+       
+     .l{
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+     }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            position: relative;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .hero {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1534258936925-c58bed479fcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1951&q=80') no-repeat center center/cover;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            z-index: 1;
+            padding: 2rem;
+            background: rgba(26, 92, 158, 0.7);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--light);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .schedule-box {
+            background: rgba(39, 174, 96, 0.85);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem auto;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(5px);
+        }
+        
+        .schedule-box h3 {
+            color: var(--dark);
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .schedule-days {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .day-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .day-card.current-day {
+            transform: scale(1.05);
+            border: 3px solid var(--secondary);
+            box-shadow: 0 0 20px rgba(243, 156, 18, 0.6);
+        }
+        
+        .day-card h4 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .day-card p {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .day-card i {
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            margin-top: 1rem;
+            border: 2px solid var(--secondary);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background: transparent;
+            color: var(--secondary);
+            transform: translateY(-5px);
+        }
+        
+        section {
+            padding: 6rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--secondary);
+        }
+        
+        .about-content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            box-shadow: var(--shadow);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .benefits-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            background: rgba(39, 174, 96, 0.2);
+        }
+        
+        .benefit-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .countdown {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(39, 174, 96, 0.3);
+            border-radius: 10px;
+            margin: 3rem auto;
+            max-width: 800px;
+        }
+        
+        .countdown-title {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .timer-unit {
+            background: rgba(26, 92, 158, 0.8);
+            padding: 1.5rem 1rem;
+            border-radius: 8px;
+            min-width: 100px;
+            box-shadow: var(--shadow);
+        }
+        
+        .timer-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        
+        .timer-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .gallery-media {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-media {
+            transform: scale(1.05);
+        }
+        
+        .gallery-info {
+            padding: 1rem;
+        }
+        
+        .gallery-caption {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--light);
+        }
+        
+        .gallery-stats {
+            display: flex;
+            justify-content: space-between;
+            color: #ddd;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .media-type-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            z-index: 10;
+        }
+        
+        .like-comment-section {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        .like-btn, .comment-btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: transparent;
+            border: none;
+            color: #ddd;
+            cursor: pointer;
+            transition: var(--transition);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        .like-btn:hover, .comment-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--secondary);
+        }
+        
+        .liked {
+            color: #e74c3c;
+        }
+        
+        .comments-section {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 8px 8px;
+            padding: 0.5rem;
+            display: none;
+        }
+        
+        .comments-container {
+            max-height: 200px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+        
+        .comment {
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+        }
+        
+        .comment-user {
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        
+        .comment-date {
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+        
+        .comment-text {
+            font-size: 0.9rem;
+        }
+        
+        .add-comment {
+            display: flex;
+            margin-top: 0.5rem;
+            gap: 0.5rem;
+        }
+        
+        .comment-input {
+            flex: 1;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.2);
+            color: var(--light);
+        }
+        
+        .post-comment-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 0 15px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .post-comment-btn:hover {
+            background: #13487e;
+        }
+        
+        .contact {
+            background: rgba(26, 92, 158, 0.7);
+            backdrop-filter: blur(5px);
+            text-align: center;
+            border-radius: 15px;
+            padding: 3rem;
+            margin: 0 auto;
+            max-width: 900px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            min-width: 250px;
+            transition: var(--transition);
+        }
+        
+        .contact-item:hover {
+            background: rgba(39, 174, 96, 0.3);
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--light);
+            font-size: 1.5rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .social-icon:hover {
+            background: var(--secondary);
+            color: var(--dark);
+            transform: translateY(-5px);
+        }
+        
+        footer {
+            background: var(--dark);
+            text-align: center;
+            padding: 3rem 0 2rem;
+        }
+        
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .schedule-days {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .logo-main {
+                font-size: 1.5rem;
+            }
+            
+            .logo-sub {
+                font-size: 0.9rem;
+            }
+            
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .highlight {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+        
+        .map-container {
+            margin-top: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 300px;
+            background: #ccc;
+        }
+        
+        .contact-detail {
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
+        
+        /* Admin Panel Styles */
+        .admin-panel {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2000;
+        }
+        
+        .admin-btn {
+            background: var(--secondary);
+            color: var(--dark);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .admin-btn:hover {
+            transform: rotate(90deg) scale(1.1);
+        }
+        
+        .admin-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 3000;
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .admin-content {
+            background: var(--darker);
+            width: 90%;
+            max-width: 800px;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--primary);
+        }
+        
+        .close-admin {
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .close-admin:hover {
+            color: var(--secondary);
+            transform: rotate(90deg);
+        }
+        
+        .admin-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--light);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tab-btn.active {
+            background: var(--primary);
+            color: var(--light);
+        }
+        
+        .tab-btn:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--light);
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .admin-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .admin-gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 120px;
+        }
+        
+        .admin-gallery-item img,
+        .admin-gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .gallery-actions {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5rem;
+        }
+        
+        .gallery-action-btn {
+            background: none;
+            border: none;
+            color: var(--light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .gallery-action-btn:hover {
+            color: var(--secondary);
+            transform: scale(1.2);
+        }
+        
+        .upload-area {
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 1rem;
+        }
+        
+        .upload-area:hover {
+            border-color: var(--secondary);
+            background: rgba(39, 174, 96, 0.1);
+        }
+        
+        .upload-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            flex: 1;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: var(--light);
+        }
+        
+        .btn-primary:hover {
+            background: #13487e;
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .btn-danger {
+            background: #e74c3c;
+            color: var(--light);
+        }
+        
+        .btn-danger:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            background: var(--accent);
+            color: var(--light);
+            box-shadow: var(--shadow);
+            z-index: 4000;
+            transform: translateX(120%);
+            transition: transform 0.3s ease;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        /* Login Form */
+        .login-form {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        
+        .login-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+        
+        .login-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .login-form .form-control {
+            background: rgba(0, 0, 0, 0.4);
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .login-btn:hover {
+            background: #13487e;
+        }
+        
+        /* Announcements Section */
+        .announcements-container {
+            margin-top: 2rem;
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        
+        .announcement {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .announcement-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .announcement-title {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .announcement-date {
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+        
+        .announcement-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .delete-announcement {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: #e74c3c;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        
+        /* Admin View Section */
+        .admin-view-section {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .admin-view-title {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .admin-view-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .view-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .view-count {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .view-label {
+            font-size: 0.9rem;
+        }
+        
+        /* Announcements on Homepage */
+        .home-announcements {
+            background: rgba(39, 174, 96, 0.3);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .home-announcements-title {
+            text-align: center;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Video Modal */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 4000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .video-modal-content {
+            width: 90%;
+            max-width: 800px;
+            position: relative;
+        }
+        
+        .video-modal-content video {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .close-video {
+            position: absolute;
+            top: -30px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        
+        /* Media type toggle */
+        .media-type-toggle {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+        
+        .media-type-btn {
+            padding: 0.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--light);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .media-type-btn.active {
+            background: var(--primary);
+        }
+        
+        .media-type-btn:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.2);
+        }
+	</style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <div class="logo">
+                       <img src="logo.jpg" alt="logo" class="l">
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content"> 
+                <h1>Manass One Nation</h1> <br>
+                <h2>Kaduna Regus</h2>
+                <p id="welcome-text">Join us every Saturday and Sunday at 6:00 AM for an invigorating jogging session at Abuja Junction, Kaduna State</p>
+                
+                <div class="schedule-box">
+                    <h3>Jogging Schedule</h3>
+                    <div class="schedule-days">
+                        <div class="day-card" id="saturday-card">
+                            <h4>Saturday</h4>
+                            <p><i class="far fa-clock"></i> 6:00 AM - 8:00 AM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Abuja Junction, Kaduna</p>
+                        </div>
+                        <div class="day-card" id="sunday-card">
+                            <h4>Sunday</h4>
+                            <p><i class="far fa-clock"></i> 6:00 AM - 8:00 AM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Abuja Junction, Kaduna</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#schedule" class="cta-button">Join Our Next Session!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcements on Homepage -->
+    <section class="home-announcements">
+        <div class="container">
+            <h2 class="home-announcements-title">Latest Announcements</h2>
+            <div id="home-announcements-container">
+                <div class="announcement">
+                    <div class="announcement-header">
+                        <div class="announcement-title">New Jogging Route</div>
+                        <div class="announcement-date">Aug 3, 2025</div>
+                    </div>
+                    <div class="announcement-content">Starting this weekend, we'll be using a new route that goes through the scenic park area. Meet at the usual spot!</div>
+                </div>
+                <div class="announcement">
+                    <div class="announcement-header">
+                        <div class="announcement-title">Community Breakfast</div>
+                        <div class="announcement-date">Jul 28, 2025</div>
+                    </div>
+                    <div class="announcement-content">Join us after Sunday's jog for a community breakfast at the local cafe. All are welcome!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Our Community</h2>
+            <div class="about-content" id="about-text">
+                Welcome to <span class='highlight'>Manass One Nation Kaduna Regus</span>, a dynamic sports and fitness community that empowers individuals to unlock their full potential. Our mission is to provide a supportive environment where people can develop their skills, build their strength, and achieve their fitness goals. From sports enthusiasts to fitness fanatics, we welcome everyone to join us in our pursuit of excellence. Whether you're looking to improve your athletic performance, get in shape, or simply have fun, Manass One Nation Kaduna Regus is the perfect place to be. Our morning jogging sessions are designed for all fitness levels, from beginners to experienced runners. We believe that fitness should be enjoyable, and our community will help you stay motivated and achieve your personal best.
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <h2 class="section-title">Our Weekly Schedule</h2>
+            
+            <div class="countdown">
+                <h3 class="countdown-title">Next Session Starts In:</h3>
+                <div class="countdown-timer">
+                    <div class="timer-unit">
+                        <div class="timer-value" id="days">00</div>
+                        <div class="timer-label">Days</div>
+                    </div>
+                    <div class="timer-unit">
+                        <div class="timer-value" id="hours">00</div>
+                        <div class="timer-label">Hours</div>
+                    </div>
+                    <div class="timer-unit">
+                        <div class="timer-value" id="minutes">00</div>
+                        <div class="timer-label">Minutes</div>
+                    </div>
+                    <div class="timer-unit">
+                        <div class="timer-value" id="seconds">00</div>
+                        <div class="timer-label">Seconds</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="schedule-days">
+                <div class="day-card" id="saturday-card">
+                    <h4>Saturday</h4>
+                    <p><i class="far fa-clock"></i> 6:00 AM - 8:00 AM</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Abuja Junction, Kaduna</p>
+                    <p>Start your weekend with energy and enthusiasm!</p>
+                </div>
+                <div class="day-card" id="sunday-card">
+                    <h4>Sunday</h4>
+                    <p><i class="far fa-clock"></i> 6:00 AM - 8:00 AM</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Abuja Junction, Kaduna</p>
+                    <p>Refresh your mind and body for the week ahead!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Benefits of Morning Jogging</h2>
+            <div class="benefits-container">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Cardiovascular Health</h3>
+                    <p>Regular jogging strengthens your heart and improves circulation.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Mental Clarity</h3>
+                    <p>Morning exercise boosts brain function and reduces stress.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-weight"></i>
+                    </div>
+                    <h3>Weight Management</h3>
+                    <p>Burn calories and maintain a healthy weight with regular jogging.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>Connect with like-minded people and build lasting friendships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Community in Action</h2>
+            
+            <div class="media-type-toggle">
+                <button class="media-type-btn active" id="all-media">All Media</button>
+                <button class="media-type-btn" id="photos-only">Photos</button>
+                <button class="media-type-btn" id="videos-only">Videos</button>
+            </div>
+            
+            <div class="gallery" id="gallery-container">
+                <!-- Gallery items will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p>Have questions? Reach out to us for more information!</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location</h3>
+                    <p class="contact-detail">Abuja Junction, Kaduna State</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p class="contact-detail">manassonenationkadunaregus@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Contact</h3>
+                    <p class="contact-detail">+234 814 472 2911 (chairman)</p>
+                    <p class="contact-detail">+234 904 135 6195 (Vice-chairman)</p>
+                     <p class="contact-detail">+234 706 384 9950 (P.R.O)</p>
+                    <p class="contact-detail">+234 911 720 9334 (Secretary)</p>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <!-- Map placeholder -->
+                <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:#1a5c9e; color:white;">
+                    <i class="fas fa-map-marked-alt" style="font-size: 3rem;"></i>
+                    <p style="margin-left: 1rem;">Abuja Junction, Kaduna</p>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61575006099089" class="social-icon" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/manassonenation" class="social-icon" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/manassonenationkadunaregus?igsh=ZGUzMzM3NWJiOQ==" class="social-icon" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@manass.one.nation.k?_t=ZS-8yZ6fwNURLG&_r=1" class="social-icon" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <div class="logo">
+                    <img src="logo.jpg" alt="logo" class="l">
+                </div>
+            </div>
+            <p>Join us every weekend for a refreshing morning jog at Abuja Junction, Kaduna</p>
+            
+            <div class="copyright">
+                <p>&copy; <span id="current-year"></span> Manass One Nation Kaduna Regus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Panel Button -->
+    <div class="admin-panel">
+        <button class="admin-btn" id="admin-btn">
+            <i class="fas fa-cog"></i>
+        </button>
+    </div>
+
+    <!-- Admin Modal with Login -->
+    <div class="admin-modal" id="admin-modal">
+        <div class="admin-content">
+            <div class="admin-header">
+                <h3 id="admin-panel-title">Admin Login</h3>
+                <button class="close-admin" id="close-admin">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <!-- Login Form (visible by default) -->
+            <div id="login-section">
+                <div class="login-form">
+                    <h3 class="login-title">Admin Login</h3>
+                    <div class="form-group">
+                        <label for="admin-id">ID Number</label>
+                        <input type="text" id="admin-id" class="form-control" placeholder="Enter your ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-password">Password</label>
+                        <input type="password" id="admin-password" class="form-control" placeholder="Enter your password">
+                    </div>
+                    <button class="login-btn" id="login-btn">Login</button>
+                </div>
+            </div>
+            
+            <!-- Admin Panel (hidden until login) -->
+            <div id="admin-panel-section" style="display: none;">
+                <div class="admin-tabs">
+                    <button class="tab-btn active" data-tab="edit-content">Edit Content</button>
+                    <button class="tab-btn" data-tab="gallery-manage">Gallery</button>
+                    <button class="tab-btn" data-tab="post-info">Post Info</button>
+                    <button class="tab-btn" data-tab="site-settings">Settings</button>
+                    <button class="tab-btn" id="logout-btn">Logout</button>
+                </div>
+                
+                <!-- Edit Content Tab -->
+                <div class="tab-content active" id="edit-content">
+                    <div class="form-group">
+                        <label for="about-text">About Section Content</label>
+                        <textarea id="about-text" class="form-control">Welcome to <span class='highlight'>Manass One Nation Kaduna Regus</span>, a dynamic sports and fitness community that empowers individuals to unlock their full potential. Our mission is to provide a supportive environment where people can develop their skills, build their strength, and achieve their fitness goals. From sports enthusiasts to fitness fanatics, we welcome everyone to join us in our pursuit of excellence. Whether you're looking to improve your athletic performance, get in shape, or simply have fun, Manass One Nation Kaduna Regus is the perfect place to be. Our morning jogging sessions are designed for all fitness levels, from beginners to experienced runners. We believe that fitness should be enjoyable, and our community will help you stay motivated and achieve your personal best.</textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="welcome-message">Welcome Message</label>
+                        <input type="text" id="welcome-message" class="form-control" value="Join us every Saturday and Sunday at 6:00 AM for an invigorating jogging session at Abuja Junction, Kaduna State">
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="save-content">Save Changes</button>
+                        <button class="btn btn-secondary" id="reset-content">Reset</button>
+                    </div>
+                </div>
+                
+                <!-- Gallery Management Tab -->
+                <div class="tab-content" id="gallery-manage">
+                    <h4>Current Gallery</h4>
+                    <div class="admin-gallery" id="admin-gallery">
+                        <!-- Gallery items will be added here dynamically -->
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Add New Media</label>
+                        <div class="upload-area" id="upload-area">
+                            <div class="upload-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <p>Click to upload or drag & drop images or videos</p>
+                            <input type="file" id="media-upload" accept="image/*,video/*" style="display: none;">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="media-type">Media Type</label>
+                        <select id="media-type" class="form-control">
+                            <option value="image">Image</option>
+                            <option value="video">Video</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="image-caption">Media Caption (Optional)</label>
+                        <input type="text" id="image-caption" class="form-control" placeholder="Enter a caption for the media">
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="add-media">Add to Gallery</button>
+                    </div>
+                </div>
+                
+                <!-- Post Information Tab -->
+                <div class="tab-content" id="post-info">
+                    <div class="form-group">
+                        <label for="announcement-title">Title</label>
+                        <input type="text" id="announcement-title" class="form-control" placeholder="Enter announcement title">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="announcement-content">Content</label>
+                        <textarea id="announcement-content" class="form-control" placeholder="Enter your announcement content"></textarea>
+                    </div>
+                    
+                    <button class="btn btn-primary" id="post-announcement">Post Announcement</button>
+                    
+                    <div class="announcements-container" id="announcements-container">
+                        <!-- Announcements will be added here -->
+                    </div>
+                </div>
+                
+                <!-- Site Settings Tab -->
+                <div class="tab-content" id="site-settings">
+                    <div class="form-group">
+                        <label for="primary-color">Primary Color</label>
+                        <input type="color" id="primary-color" class="form-control" value="#1a5c9e">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="accent-color">Accent Color</label>
+                        <input type="color" id="accent-color" class="form-control" value="#f39c12">
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="save-settings">Save Settings</button>
+                        <button class="btn btn-secondary" id="reset-settings">Reset to Default</button>
+                    </div>
+                    
+                    <div class="admin-view-section">
+                        <h3 class="admin-view-title">Website Statistics</h3>
+                        <div class="admin-view-content">
+                            <div class="view-item">
+                                <div class="view-count">2,458</div>
+                                <div class="view-label">Monthly Visitors</div>
+                            </div>
+                            <div class="view-item">
+                                <div class="view-count">128</div>
+                                <div class="view-label">Active Members</div>
+                            </div>
+                            <div class="view-item">
+                                <div class="view-count" id="gallery-count">0</div>
+                                <div class="view-label">Gallery Items</div>
+                            </div>
+                            <div class="view-item">
+                                <div class="view-count" id="announcement-count">0</div>
+                                <div class="view-label">Announcements</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Video Modal -->
+    <div class="video-modal" id="video-modal">
+        <div class="video-modal-content">
+           <video id="fullscreen-video" >
+                Your browser does not support the video tag.
+            </video>
+            <button class="close-video" id="close-video">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <span id="notification-text">Changes saved successfully!</span>
+    </div>
+
+    <script>
+        // Data storage keys
+        const STORAGE_KEYS = {
+            GALLERY: 'manass_gallery_data',
+            ANNOUNCEMENTS: 'manass_announcements',
+            ABOUT: 'manass_about_content',
+            WELCOME: 'manass_welcome_message',
+            SETTINGS: 'manass_site_settings'
+        };
+        
+        // Initial gallery data with likes and comments
+        const initialGalleryData = [
+            {
+                id: '1',
+                type: "image",
+                url: "https://images.unsplash.com/photo-1517344884509-a0c97ec11bcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                caption: "Morning jogging group",
+                likes: 24,
+                comments: [
+                    { user: "Aisha M.", text: "Great session today!", date: "2025-08-02" },
+                    { user: "Chinedu O.", text: "Can't wait for the next one!", date: "2025-08-01" }
+                ]
+            },
+            {
+                id: '2',
+                type: "image",
+                url: "https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                caption: "Group stretching session",
+                likes: 18,
+                comments: [
+                    { user: "Bola K.", text: "The stretches really helped my muscles!", date: "2025-07-30" }
+                ]
+            },
+            {
+                id: '3',
+                type: "image",
+                url: "https://images.unsplash.com/photo-1571008887538-b36bb32f4571?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                caption: "Sunrise jog at Abuja Junction",
+                likes: 32,
+                comments: []
+            },
+            {
+                id: '4',
+                type: "video",
+                url: "https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-partying-happily-4640-large.mp4",
+                caption: "Weekend jogging session",
+                likes: 45,
+                comments: [
+                    { user: "Emeka T.", text: "This was so much fun!", date: "2025-07-28" },
+                    { user: "Fatima A.", text: "The energy was amazing!", date: "2025-07-27" }
+                ]
+            },
+            {
+                id: '5',
+                type: "image",
+                url: "https://images.unsplash.com/photo-1590232670695-18a81902505e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                caption: "Cool down exercises",
+                likes: 15,
+                comments: []
+            },
+            {
+                id: '6',
+                type: "image",
+                url: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                caption: "Community gathering",
+                likes: 28,
+                comments: [
+                    { user: "James L.", text: "Love this community!", date: "2025-07-25" }
+                ]
+            }
+        ];
+        
+        // Initial announcements
+        const initialAnnouncements = [
+            {
+                id: 'a1',
+                title: "New Jogging Route",
+                content: "Starting this weekend, we'll be using a new route that goes through the scenic park area. Meet at the usual spot!",
+                date: "2025-08-03"
+            },
+            {
+                id: 'a2',
+                title: "Community Breakfast",
+                content: "Join us after Sunday's jog for a community breakfast at the local cafe. All are welcome!",
+                date: "2025-07-28"
+            }
+        ];
+        
+        // Load data from localStorage or initialize
+        function loadData() {
+            // Gallery data
+            let galleryData = JSON.parse(localStorage.getItem(STORAGE_KEYS.GALLERY));
+            if (!galleryData) {
+                galleryData = initialGalleryData;
+                localStorage.setItem(STORAGE_KEYS.GALLERY, JSON.stringify(galleryData));
+            }
+            
+            // Announcements
+            let announcements = JSON.parse(localStorage.getItem(STORAGE_KEYS.ANNOUNCEMENTS));
+            if (!announcements) {
+                announcements = initialAnnouncements;
+                localStorage.setItem(STORAGE_KEYS.ANNOUNCEMENTS, JSON.stringify(announcements));
+            }
+            
+            // About content
+            let aboutContent = localStorage.getItem(STORAGE_KEYS.ABOUT);
+            if (!aboutContent) {
+                aboutContent = document.getElementById('about-text').innerHTML;
+                localStorage.setItem(STORAGE_KEYS.ABOUT, aboutContent);
+            } else {
+                document.getElementById('about-text').innerHTML = aboutContent;
+            }
+            
+            // Welcome message
+            let welcomeMessage = localStorage.getItem(STORAGE_KEYS.WELCOME);
+            if (!welcomeMessage) {
+                welcomeMessage = document.getElementById('welcome-text').textContent;
+                localStorage.setItem(STORAGE_KEYS.WELCOME, welcomeMessage);
+            } else {
+                document.getElementById('welcome-text').textContent = welcomeMessage;
+            }
+            
+            return { galleryData, announcements };
+        }
+        
+        // Save gallery data to localStorage
+        function saveGalleryData(data) {
+            localStorage.setItem(STORAGE_KEYS.GALLERY, JSON.stringify(data));
+        }
+        
+        // Save announcements to localStorage
+        function saveAnnouncements(data) {
+            localStorage.setItem(STORAGE_KEYS.ANNOUNCEMENTS, JSON.stringify(data));
+        }
+        
+        // Render gallery function
+        function renderGallery(filter = "all") {
+            const galleryContainer = document.getElementById('gallery-container');
+            galleryContainer.innerHTML = '';
+            
+            const { galleryData } = loadData();
+            
+            galleryData.forEach(item => {
+                if (filter !== "all" && filter !== item.type) return;
+                
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.dataset.id = item.id;
+                
+                // Media element
+                let mediaElement;
+                if (item.type === "image") {
+                    mediaElement = `<img src="${item.url}" alt="${item.caption}" class="gallery-media">`;
+                } else if (item.type === "video") {
+                    mediaElement = `
+                        <video class="gallery-media">
+                            <source src="${item.url}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    `;
+                }
+                
+                // Comments section
+                const commentsHTML = item.comments.map(comment => `
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-user">${comment.user}</div>
+                            <div class="comment-date">${comment.date}</div>
+                        </div>
+                        <div class="comment-text">${comment.text}</div>
+                    </div>
+                `).join('');
+                
+                galleryItem.innerHTML = `
+                    ${mediaElement}
+                    <div class="media-type-indicator">
+                        ${item.type === "image" ? '<i class="fas fa-image"></i> Photo' : '<i class="fas fa-video"></i> Video'}
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-caption">${item.caption}</div>
+                        <div class="gallery-stats">
+                            <span>${item.likes} likes</span>
+                            <span>${item.comments.length} comments</span>
+                        </div>
+                        <div class="like-comment-section">
+                            <button class="like-btn" data-id="${item.id}">
+                                <i class="fas fa-heart"></i> Like
+                            </button>
+                            <button class="comment-btn" data-id="${item.id}">
+                                <i class="fas fa-comment"></i> Comment
+                            </button>
+                        </div>
+                        <div class="comments-section" id="comments-${item.id}">
+                            <div class="comments-container">
+                                ${commentsHTML}
+                            </div>
+                            <div class="add-comment">
+                                <input type="text" class="comment-input" placeholder="Add a comment..." id="comment-input-${item.id}">
+                                <button class="post-comment-btn" data-id="${item.id}">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                galleryContainer.appendChild(galleryItem);
+            });
+            
+            // Add event listeners
+            document.querySelectorAll('.like-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const id = btn.dataset.id;
+                    likeItem(id);
+                });
+            });
+            
+            document.querySelectorAll('.comment-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const id = btn.dataset.id;
+                    toggleComments(id);
+                });
+            });
+            
+            document.querySelectorAll('.post-comment-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const id = btn.dataset.id;
+                    const input = document.getElementById(`comment-input-${id}`);
+                    addComment(id, input.value);
+                    input.value = '';
+                });
+            });
+            
+            // Add keyboard support for comments
+            document.querySelectorAll('.comment-input').forEach(input => {
+                input.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        const id = input.id.split('-')[2];
+                        addComment(id, input.value);
+                        input.value = '';
+                    }
+                });
+            });
+        }
+        
+        // Like an item
+        function likeItem(id) {
+            const { galleryData } = loadData();
+            const item = galleryData.find(i => i.id === id);
+            if (item) {
+                item.likes++;
+                saveGalleryData(galleryData);
+                renderGallery();
+                showNotification('Liked the post!');
+            }
+        }
+        
+        // Toggle comments section
+        function toggleComments(id) {
+            const commentsSection = document.getElementById(`comments-${id}`);
+            commentsSection.style.display = commentsSection.style.display === 'block' ? 'none' : 'block';
+        }
+        
+        // Add a comment
+        function addComment(id, text) {
+            if (!text.trim()) return;
+            
+            const { galleryData } = loadData();
+            const item = galleryData.find(i => i.id === id);
+            if (item) {
+                const today = new Date();
+                const dateStr = today.toISOString().split('T')[0];
+                
+                item.comments.push({
+                    user: "You",
+                    text: text,
+                    date: dateStr
+                });
+                
+                saveGalleryData(galleryData);
+                renderGallery();
+                showNotification('Comment added!');
+            }
+        }
+        
+        // Set up media filter buttons
+        document.getElementById('all-media').addEventListener('click', () => {
+            document.querySelectorAll('.media-type-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('all-media').classList.add('active');
+            renderGallery('all');
+        });
+        
+        document.getElementById('photos-only').addEventListener('click', () => {
+            document.querySelectorAll('.media-type-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('photos-only').classList.add('active');
+            renderGallery('image');
+        });
+        
+        document.getElementById('videos-only').addEventListener('click', () => {
+            document.querySelectorAll('.media-type-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('videos-only').classList.add('active');
+            renderGallery('video');
+        });
+        
+        // Close video modal
+        document.getElementById('close-video').addEventListener('click', () => {
+            const videoModal = document.getElementById('video-modal');
+            const videoPlayer = document.getElementById('fullscreen-video');
+            
+            videoPlayer.pause();
+            videoModal.style.display = 'none';
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Countdown to next session
+        function updateCountdown() {
+            const now = new Date();
+            const day = now.getDay(); // Sunday = 0, Saturday = 6
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            
+            // Determine next session
+            let nextSession;
+            if (day === 6 && hours < 6) { // Saturday before 6am
+                nextSession = new Date(now);
+                nextSession.setHours(6, 0, 0, 0);
+            } else if (day === 0 && hours < 6) { // Sunday before 6am
+                nextSession = new Date(now);
+                nextSession.setHours(6, 0, 0, 0);
+            } else {
+                // Next session is next Saturday
+                const daysUntilSaturday = (6 - day + 7) % 7;
+                if (daysUntilSaturday === 0 && hours >= 6) {
+                    // If today is Saturday but after 6am, next session is next Saturday
+                    nextSession = new Date(now);
+                    nextSession.setDate(now.getDate() + 7);
+                } else {
+                    nextSession = new Date(now);
+                    nextSession.setDate(now.getDate() + daysUntilSaturday);
+                }
+                nextSession.setHours(6, 0, 0, 0);
+            }
+            
+            const diff = nextSession - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hoursRem = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutesRem = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secondsRem = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hoursRem.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutesRem.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = secondsRem.toString().padStart(2, '0');
+        }
+        
+        // Initialize and update every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Highlight current day in schedule
+        function highlightCurrentDay() {
+            const today = new Date().getDay();
+            const saturdayCard = document.getElementById('saturday-card');
+            const sundayCard = document.getElementById('sunday-card');
+            
+            // Reset all cards
+            saturdayCard.classList.remove('current-day');
+            sundayCard.classList.remove('current-day');
+            
+            // Sunday = 0, Saturday = 6
+            if (today === 6) {
+                saturdayCard.classList.add('current-day');
+            } else if (today === 0) {
+                sundayCard.classList.add('current-day');
+            }
+        }
+        
+        // Animation for schedule cards
+        const scheduleCards = document.querySelectorAll('.day-card');
+        scheduleCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                if (!card.classList.contains('current-day')) {
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // Admin Panel Functionality
+        const adminBtn = document.getElementById('admin-btn');
+        const adminModal = document.getElementById('admin-modal');
+        const closeAdmin = document.getElementById('close-admin');
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const notification = document.getElementById('notification');
+        const notificationText = document.getElementById('notification-text');
+        const loginSection = document.getElementById('login-section');
+        const adminPanelSection = document.getElementById('admin-panel-section');
+        const loginBtn = document.getElementById('login-btn');
+        const logoutBtn = document.getElementById('logout-btn');
+        const adminPanelTitle = document.getElementById('admin-panel-title');
+        
+        // Show admin panel
+        adminBtn.addEventListener('click', () => {
+            adminModal.style.display = 'flex';
+            // Reset to login screen when opening
+            loginSection.style.display = 'block';
+            adminPanelSection.style.display = 'none';
+            adminPanelTitle.textContent = 'Admin Login';
+        });
+        
+        // Hide admin panel
+        closeAdmin.addEventListener('click', () => {
+            adminModal.style.display = 'none';
+        });
+        
+        // Tab switching
+        tabBtns.forEach(btn => {
+            if (btn.id !== 'logout-btn') {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = btn.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            }
+        });
+        
+        // Show notification
+        function showNotification(message, isError = false) {
+            notificationText.textContent = message;
+            notification.classList.add('show');
+            
+            if (isError) {
+                notification.style.background = '#e74c3c';
+            } else {
+                notification.style.background = '#27ae60';
+            }
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+        
+        // Login functionality
+        loginBtn.addEventListener('click', () => {
+            const adminId = document.getElementById('admin-id').value;
+            const adminPassword = document.getElementById('admin-password').value;
+            
+            // Credentials
+            const correctId = "MNS 90003";
+            const correctPassword = "M@nass1234";
+            
+            if (adminId === correctId && adminPassword === correctPassword) {
+                // Successful login
+                loginSection.style.display = 'none';
+                adminPanelSection.style.display = 'block';
+                adminPanelTitle.textContent = 'Admin Panel';
+                showNotification('Login successful! Welcome to Admin Panel');
+            } else {
+                // Failed login
+                showNotification('Invalid credentials. Please try again.', true);
+            }
+        });
+        
+        // Logout functionality
+        logoutBtn.addEventListener('click', () => {
+            loginSection.style.display = 'block';
+            adminPanelSection.style.display = 'none';
+            adminPanelTitle.textContent = 'Admin Login';
+            
+            // Clear form fields
+            document.getElementById('admin-id').value = '';
+            document.getElementById('admin-password').value = '';
+            
+            showNotification('You have been logged out');
+        });
+        
+        // Save content changes
+        document.getElementById('save-content').addEventListener('click', () => {
+            const aboutText = document.getElementById('about-text').value;
+            const welcomeMessage = document.getElementById('welcome-message').value;
+            
+            // Save to localStorage
+            localStorage.setItem(STORAGE_KEYS.ABOUT, aboutText);
+            localStorage.setItem(STORAGE_KEYS.WELCOME, welcomeMessage);
+            
+            // Update the about section
+            document.getElementById('about-text').innerHTML = aboutText;
+            
+            // Update the welcome message
+            document.querySelector('.hero p').textContent = welcomeMessage;
+            
+            showNotification('Content updated successfully!');
+        });
+        
+        // Reset content
+        document.getElementById('reset-content').addEventListener('click', () => {
+            // Reset the form fields
+            const defaultAbout = "Welcome to <span class='highlight'>Manass One Nation Kaduna Regus</span>, a dynamic sports and fitness community that empowers individuals to unlock their full potential. Our mission is to provide a supportive environment where people can develop their skills, build their strength, and achieve their fitness goals. From sports enthusiasts to fitness fanatics, we welcome everyone to join us in our pursuit of excellence. Whether you're looking to improve your athletic performance, get in shape, or simply have fun, Manass One Nation Kaduna Regus is the perfect place to be. Our morning jogging sessions are designed for all fitness levels, from beginners to experienced runners. We believe that fitness should be enjoyable, and our community will help you stay motivated and achieve your personal best.";
+            const defaultWelcome = "Join us every Saturday and Sunday at 6:00 AM for an invigorating jogging session at Abuja Junction, Kaduna State";
+            
+            document.getElementById('about-text').value = defaultAbout;
+            document.getElementById('welcome-message').value = defaultWelcome;
+            
+            // Update the page
+            document.getElementById('about-text').innerHTML = defaultAbout;
+            document.getElementById('welcome-text').textContent = defaultWelcome;
+            
+            // Save to localStorage
+            localStorage.setItem(STORAGE_KEYS.ABOUT, defaultAbout);
+            localStorage.setItem(STORAGE_KEYS.WELCOME, defaultWelcome);
+            
+            showNotification('Content reset to default');
+        });
+        
+        // Save site settings
+        document.getElementById('save-settings').addEventListener('click', () => {
+            const primaryColor = document.getElementById('primary-color').value;
+            const accentColor = document.getElementById('accent-color').value;
+            
+            // Save to localStorage
+            localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify({
+                primary: primaryColor,
+                accent: accentColor
+            }));
+            
+            // Update CSS variables
+            document.documentElement.style.setProperty('--primary', primaryColor);
+            document.documentElement.style.setProperty('--secondary', accentColor);
+            
+            showNotification('Site settings updated successfully!');
+        });
+        
+        // Reset site settings
+        document.getElementById('reset-settings').addEventListener('click', () => {
+            // Save to localStorage
+            localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify({
+                primary: '#1a5c9e',
+                accent: '#f39c12'
+            }));
+            
+            // Update CSS variables
+            document.documentElement.style.setProperty('--primary', '#1a5c9e');
+            document.documentElement.style.setProperty('--secondary', '#f39c12');
+            
+            // Update form fields
+            document.getElementById('primary-color').value = '#1a5c9e';
+            document.getElementById('accent-color').value = '#f39c12';
+            
+            showNotification('Site settings reset to default');
+        });
+        
+        // Post new announcement
+        document.getElementById('post-announcement').addEventListener('click', () => {
+            const title = document.getElementById('announcement-title').value;
+            const content = document.getElementById('announcement-content').value;
+            
+            if (!title || !content) {
+                showNotification('Please fill in both title and content', true);
+                return;
+            }
+            
+            const { announcements } = loadData();
+            
+            const newAnnouncement = {
+                id: 'a' + (announcements.length + 1),
+                title,
+                content,
+                date: new Date().toISOString().split('T')[0]
+            };
+            
+            announcements.unshift(newAnnouncement);
+            saveAnnouncements(announcements);
+            
+            // Update homepage announcements
+            const homeContainer = document.getElementById('home-announcements-container');
+            const announcementEl = document.createElement('div');
+            announcementEl.className = 'announcement';
+            announcementEl.innerHTML = `
+                <div class="announcement-header">
+                    <div class="announcement-title">${title}</div>
+                    <div class="announcement-date">${newAnnouncement.date}</div>
+                </div>
+                <div class="announcement-content">${content}</div>
+            `;
+            
+            homeContainer.prepend(announcementEl);
+            
+            // Clear form
+            document.getElementById('announcement-title').value = '';
+            document.getElementById('announcement-content').value = '';
+            
+            showNotification('Announcement posted successfully!');
+        });
+        
+        // Initialize the page
+        window.addEventListener('load', () => {
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Highlight current day
+            highlightCurrentDay();
+            
+            // Render gallery
+            renderGallery();
+            
+            // Set up video modal
+            const videoModal = document.getElementById('video-modal');
+            videoModal.addEventListener('click', (e) => {
+                if (e.target === videoModal) {
+                    const videoPlayer = document.getElementById('fullscreen-video');
+                    videoPlayer.pause();
+                    videoModal.style.display = 'none';
+                }
+            });
+            
+            // Set up gallery upload
+            const uploadArea = document.getElementById('upload-area');
+            const mediaUpload = document.getElementById('media-upload');
+            
+            uploadArea.addEventListener('click', () => {
+                mediaUpload.click();
+            });
+            
+            // Handle media upload
+            document.getElementById('add-media').addEventListener('click', () => {
+                const file = mediaUpload.files[0];
+                if (!file) {
+                    showNotification('Please select a file to upload', true);
+                    return;
+                }
+                
+                const mediaType = document.getElementById('media-type').value;
+                const caption = document.getElementById('image-caption').value || 'New media';
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const { galleryData } = loadData();
+                    
+                    const newMedia = {
+                        id: 'g' + (galleryData.length + 1),
+                        type: mediaType,
+                        url: e.target.result,
+                        caption: caption,
+                        likes: 0,
+                        comments: []
+                    };
+                    
+                    galleryData.unshift(newMedia);
+                    saveGalleryData(galleryData);
+                    renderGallery();
+                    
+                    // Reset form
+                    mediaUpload.value = '';
+                    document.getElementById('image-caption').value = '';
+                    
+                    showNotification('Media added to gallery!');
+                };
+                reader.readAsDataURL(file);
+            });
+            
+            // Load saved settings
+            const savedSettings = JSON.parse(localStorage.getItem(STORAGE_KEYS.SETTINGS));
+            if (savedSettings) {
+                document.documentElement.style.setProperty('--primary', savedSettings.primary);
+                document.documentElement.style.setProperty('--secondary', savedSettings.accent);
+                
+                document.getElementById('primary-color').value = savedSettings.primary;
+                document.getElementById('accent-color').value = savedSettings.accent;
+            }
+        });
+    </script>
+</body>
+</html>
